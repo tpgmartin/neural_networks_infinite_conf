@@ -1,0 +1,7 @@
+function initialiseValues() {
+
+  const u = Math.random()
+  const v = Math.random()
+  return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v )
+
+}

@@ -5,6 +5,7 @@ import React from "react";
 import {
   BlockQuote,
   Cite,
+  CodePane,
   Deck,
   Heading,
   Image,
@@ -40,7 +41,7 @@ const theme = createTheme({
   primary: "white",
   secondary: "#1F2022",
   tertiary: "#03A9FC",
-  quartenary: "#CECECE"
+  quartenary: "#2D2D2D"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -75,6 +76,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            How this is set up
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Demonstrate gradient descent
           </Text>
         </Slide>
@@ -93,10 +99,27 @@ export default class Presentation extends React.Component {
             Backward propagation
           </Text>
         </Slide>
+        <Slide bgColor="tertiary">
+          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
+            Terminology
+          </Text>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
+            Weight initialisation
+          </Text>
+        </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Some terminology
+            Box-Muller transformation
           </Text>
+        </Slide>
+        <Slide bgColor="quartenary" notes="">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/weight_initialisation.example")}
+            margin="20px auto"
+          />
         </Slide>
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
@@ -125,8 +148,27 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Sigmoid function
+          </Text>
+        </Slide>
+        <Slide bgColor="quartenary" notes="">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/sigmoid.example")}
+            margin="20px auto"
+          />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Example
           </Text>
+        </Slide>
+        <Slide bgColor="quartenary" notes="">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/feed_forward.example")}
+            margin="20px auto"
+          />
         </Slide>
         <Slide bgColor="primary">
           <Image></Image>
