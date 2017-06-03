@@ -61,27 +61,50 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Why?
+            From scratch
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            What are we going to look at?
+            From scratch*
+          </Text>
+          <Text margin="10px 0 0" textColor="secondary" size={1} bold>
+            <Link textColor="quartenary" href={"https://github.com/nicolaspanel/numjs"}>numjs</Link>
+          </Text>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
+            Overview
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Feed-forward network
+            Investigate a learning problem
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            How this is set up
+            Determine correct response to traffic lights
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Demonstrate gradient descent
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Build feed-forward network
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Show how this is set up
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Work through three stages
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -97,6 +120,46 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Backward propagation
+          </Text>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
+            Introduction
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Web developer <Link textColor="tertiary" href={"https://twitter.com/OpenTableTechUK"}>@OpenTable</Link>
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            My machine learning jounery started in 2016
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            What are we trying to acheive with a neural network?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Learn how to determine output for given input
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Supervised learning
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Learn == minimise network error
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Adjust weights in response to error calculation
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
