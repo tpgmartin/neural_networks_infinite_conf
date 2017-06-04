@@ -29,10 +29,10 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  hiddenLayerHighlighted: require("../assets/hidden_layer_highlighted.png"),
+  multipleInputsToSingleOutput: require("../assets/multiple_inputs_to_single_output.png"),
+  singleInputToSingleOutput: require("../assets/single_input_to_single_output.png"),
+  threeLayerNetwork: require("../assets/three_layer_network.png")
 };
 
 preloader(images);
@@ -234,7 +234,10 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide bgColor="primary">
-          <Image></Image>
+          <Image src={images.singleInputToSingleOutput}/>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.multipleInputsToSingleOutput}/>
         </Slide>
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
@@ -257,8 +260,68 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            Join at Slido.com with #NeuralNetworks
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Error tells us how well we're doing
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            How do we improve this?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Can only adjust weights
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Found out how wrong/how right previous guess was
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Determine amount to adjust weights in previous layer
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Work Backwards, layer by layer
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Possible divergence of weight updates
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Weight update scales with input value
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Could be very large, even for a small error
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Learning rate, &alpha;
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Just choose &alpha; that works for us
+          </Text>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
+            Run-through
+          </Text>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
+            Recap
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -267,6 +330,11 @@ export default class Presentation extends React.Component {
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
             Tom Martin <Link textColor="tertiary" href={"https://twitter.com/tpgmartin"}>@tpgmartin</Link>
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Join at sli.do with <Link textColor="tertiary" href={"https://app.sli.do/?search=NeuralNetworks"}>#NeuralNetworks</Link>
           </Text>
         </Slide>
       </Deck>
