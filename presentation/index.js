@@ -104,22 +104,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Work through three stages
+            Work through three stages:
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Forward propagation
+            1. Forward propagation
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Error calculation
+            2. Error calculation
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Backward propagation
+            3. Backward propagation
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
@@ -154,39 +154,47 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Learn == minimise network error
+            Train by matching inputs to known outputs
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Adjust weights in response to error calculation
-          </Text>
-        </Slide>
-        <Slide bgColor="tertiary">
-          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
-            Terminology
-          </Text>
-        </Slide>
-        <Slide bgColor="tertiary">
-          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
-            Weight initialisation
+            "Learning"
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Box-Muller transformation
+            Minimise network error
           </Text>
         </Slide>
-        <Slide bgColor="quartenary" notes="">
-          <CodePane
-            lang="js"
-            source={require("raw-loader!../assets/weight_initialisation.example")}
-            margin="20px auto"
-          />
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Find correlation between inputs
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Correlation is where the magic happens
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Adjust network in response to error calculation
+          </Text>
         </Slide>
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
             Forward propagation
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Find output for single input
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Strength of relationship given by a "weight"
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -196,52 +204,161 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            output = input * weight
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            General case of muliple inputs
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Get weighted sum of inputs to that node
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Hadamard product
+            Dot product
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Plug through activtion function
+            Measure of agreement
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Sigmoid function
+            Increasing dot product == increasing "measure of agreement"
           </Text>
-        </Slide>
-        <Slide bgColor="quartenary" notes="">
-          <CodePane
-            lang="js"
-            source={require("raw-loader!../assets/sigmoid.example")}
-            margin="20px auto"
-          />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Example
+            Example we are going to follow
           </Text>
         </Slide>
-        <Slide bgColor="quartenary" notes="">
-          <CodePane
-            lang="js"
-            source={require("raw-loader!../assets/feed_forward.example")}
-            margin="20px auto"
-          />
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Traffic lights
+          </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Input will be arrays of length 3
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            e.g. [1, 0, 1] corresponds to green and red lights turning on
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Decide ouput value should be 1, or "walk"
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Input layer will be three nodes
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Ouput layer will be one node
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            But somethings missing ...
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Want nonlinear behaviour
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Add hidden layer
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Hidden layer creates intermediate correlation
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            ... still linear ...
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Explain this "... still linear ..."
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Activation function creates nonlinearities
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Relu function
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            If input &#60; 0 then return 0
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Else return input
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Final network will have hidden layer of 4 nodes
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.threeLayerNetwork}/>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            That's a lot to cover so far!
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Recap
+          </Text>
+        </Slide>
+        {/*<Slide bgColor="primary">
           <Image src={images.singleInputToSingleOutput}/>
         </Slide>
         <Slide bgColor="primary">
           <Image src={images.multipleInputsToSingleOutput}/>
-        </Slide>
+        </Slide>*/}
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
             Error calculation
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Why do we measure error?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Learning is just reducing the error
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Many different ways to quantify this
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -251,8 +368,30 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            nj.power((nj.subtract(outputLayer, walkVsStop.slice([i, i + 1]))), 2)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            error = (prediction - target) ** 2
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Error value is retained for course of iteration
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             The lower the value the better
           </Text>
+        </Slide>
+        <Slide bgColor="quartenary" notes="">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/error.example")}
+            margin="20px auto"
+          />
         </Slide>
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>

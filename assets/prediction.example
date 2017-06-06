@@ -1,0 +1,5 @@
+function feedForward(input, weight) {
+
+  return input * weight
+
+}
