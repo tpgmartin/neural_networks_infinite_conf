@@ -30,6 +30,8 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   hiddenLayerHighlighted: require("../assets/hidden_layer_highlighted.png"),
+  linearExampleNoHiddenLayer: require("../assets/linear_example_no_hidden_layer.png"),
+  linearExampleWithHiddenLayer: require("../assets/linear_example_with_hidden_layer.png"),
   multipleInputsToSingleOutput: require("../assets/multiple_inputs_to_single_output.png"),
   singleInputToSingleOutput: require("../assets/single_input_to_single_output.png"),
   threeLayerNetwork: require("../assets/three_layer_network.png")
@@ -174,7 +176,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Correlation is where the magic happens
+            Correlations are where the magic happens
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -254,7 +256,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Decide ouput value should be 1, or "walk"
+            Decide ouput value should be 1 or 0
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            "walk" or "don't walk'"
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -289,13 +296,42 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            ... still linear ...
+            Choose number of layers and nodes that perform best
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Explain this "... still linear ..."
+            Final network will have hidden layer of 4 nodes
           </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            ... still linear ...
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.linearExampleWithHiddenLayer}/>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            H = 0.4 * A + 0.8 * B + 0.6 * C
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.linearExampleWithHiddenLayer}/>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            O = 0.5 * (0.4 * A + 0.8 * B + 0.6 * C)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            O = 0.2 * A + 0.4 * B + 0.3 * C
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.linearExampleNoHiddenLayer}/>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -317,9 +353,16 @@ export default class Presentation extends React.Component {
             Else return input
           </Text>
         </Slide>
+        <Slide bgColor="quartenary" notes="">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/relu.example")}
+            margin="20px auto"
+          />
+        </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Final network will have hidden layer of 4 nodes
+            Weight initialisation ...
           </Text>
         </Slide>
         <Slide bgColor="primary">

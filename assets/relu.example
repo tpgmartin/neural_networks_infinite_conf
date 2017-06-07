@@ -1,0 +1,3 @@
+function relu(x) {
+    return iterator(x, x => ((x > 0) * x))
+}
