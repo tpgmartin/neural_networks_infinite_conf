@@ -45,9 +45,9 @@ const theme = createTheme({
   tertiary: "#03A9FC",
   quartenary: "#2D2D2D"
 }, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
-});
+    primary: "Montserrat",
+    secondary: "Helvetica"
+  });
 
 export default class Presentation extends React.Component {
   render() {
@@ -91,12 +91,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Demonstrate gradient descent
+            Build feed-forward network
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Build feed-forward network
+            Demonstrate gradient descent
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -176,62 +176,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Correlations are where the magic happens
+            Adjust network in response to error calculation
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Adjust network in response to error calculation
+            Correlations are where the magic happens
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
-            Forward propagation
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Find output for single input
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Strength of relationship given by a "weight"
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Find value of given node
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            output = input * weight
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            General case of muliple inputs
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Get weighted sum of inputs to that node
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Dot product
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Measure of agreement
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Increasing dot product == increasing "measure of agreement"
+            Setup
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -256,7 +211,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Decide ouput value should be 1 or 0
+            Output value will be 1 or 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -271,8 +226,81 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Ouput layer will be one node
+            Output layer will be one node
           </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.multipleInputsToSingleOutput} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Strength of relationship given by a "weight"
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Find output for single input node
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.multipleInputsToSingleOutput}/>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            output = input * weight
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            General case of multiple inputs
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Get weighted sum of inputs to that node
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Dot product
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Measure of agreement
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Increasing dot product == increasing "measure of agreement"
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Where do weights come from?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Randomly pick weights
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Limiting factor: how quickly network learns
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Sufficient to use normal distribution with mean 0, standard deviation 1
+          </Text>
+        </Slide>
+        <Slide bgColor="quartenary" notes="">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/weight_initialisation.example")}
+            margin="20px auto"
+          />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -282,6 +310,11 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Want nonlinear behaviour
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Want to find new correlations between input nodes
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -310,7 +343,10 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.linearExampleWithHiddenLayer}/>
+          <Image src={images.threeLayerNetwork} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.linearExampleWithHiddenLayer} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -318,7 +354,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.linearExampleWithHiddenLayer}/>
+          <Image src={images.linearExampleWithHiddenLayer} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -331,7 +367,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.linearExampleNoHiddenLayer}/>
+          <Image src={images.linearExampleNoHiddenLayer} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -360,30 +396,38 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
         </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Weight initialisation ...
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Image src={images.threeLayerNetwork}/>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            That's a lot to cover so far!
+        <Slide bgColor="tertiary">
+          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
+            Forward propagation
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Recap
+            Iteratively find output for given input
           </Text>
         </Slide>
-        {/*<Slide bgColor="primary">
-          <Image src={images.singleInputToSingleOutput}/>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Layer by layer, node by node
+          </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.multipleInputsToSingleOutput}/>
-        </Slide>*/}
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            At each layer find dot product of weights with input at that layer
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            At hidden layer, plug through activation function
+          </Text>
+        </Slide>
+        <Slide bgColor="quartenary" notes="">
+          <CodePane
+            lang="js"
+            source={require("raw-loader!../assets/forward_propagation.example")}
+            margin="20px auto"
+          />
+        </Slide>
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
             Error calculation

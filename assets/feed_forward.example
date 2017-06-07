@@ -1,5 +1,0 @@
-function feedForward() {
-
-  return sigmoid()
-
-}

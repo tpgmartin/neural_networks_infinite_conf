@@ -1,0 +1,14 @@
+const streetlights = nj.array([
+    [1, 0, 1],
+    [0, 1, 1],
+    [0, 0, 1],
+    [1, 1, 1]
+])
+
+for (let iteration = 0; iteration < 1; iteration++) {
+    for (let i = 0; i < streetlights.shape[0]; i++) {
+        let layer_0 = streetlights.slice([i, i + 1])
+        let layer_1 = relu(nj.dot(layer_0, weights_0_1))
+        let outputLayer = nj.dot(layer_1, weights_1_2)
+    }
+}
