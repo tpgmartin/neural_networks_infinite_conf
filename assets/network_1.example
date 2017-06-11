@@ -1,5 +1,11 @@
+const nj = require('numjs')
+
 function relu(x) {
     return iterator(x, x => ((x > 0) * x))
+}
+
+function relu2deriv(x) {
+    return iterator(x, x => ((x > 0) ? 1 : 0))
 }
 
 function iterator(x, fn) {
@@ -13,3 +19,15 @@ function iterator(x, fn) {
 
     return nj.array(out)
 }
+
+const streetlights = nj.array([
+    [1, 0, 1],
+    [0, 1, 1],
+    [0, 0, 1],
+    [1, 1, 1]
+])
+
+const walkVsStop = nj.array([[1, 1, 0, 0]]).T
+
+const alpha = 0.2
+const hidden_size = 4
