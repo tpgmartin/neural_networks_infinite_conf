@@ -4,7 +4,7 @@ function relu(x) {
     return iterator(x, x => ((x > 0) * x))
 }
 
-function relu2deriv(x) {
+function reluderiv(x) {
     return iterator(x, x => ((x > 0) ? 1 : 0))
 }
 
