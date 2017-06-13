@@ -36,13 +36,16 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
+  andChart: require("../assets/and_chart.png"),
+  andChartWithBoundary: require("../assets/and_chart_with_boundary.png"),
   hiddenLayerHighlighted: require("../assets/hidden_layer_highlighted.png"),
   linearExampleNoHiddenLayer: require("../assets/linear_example_no_hidden_layer.png"),
   linearExampleWithHiddenLayer: require("../assets/linear_example_with_hidden_layer.png"),
   multipleInputsToSingleOutput: require("../assets/multiple_inputs_to_single_output.png"),
   multipleInputsToSingleOutputWithWeights: require("../assets/multiple_inputs_to_single_output_with_weights.png"),
   singleInputToSingleOutput: require("../assets/single_input_to_single_output.png"),
-  threeLayerNetwork: require("../assets/three_layer_network.png")
+  threeLayerNetwork: require("../assets/three_layer_network.png"),
+  xorChart: require("../assets/xor_chart.png")
 };
 
 preloader(images);
@@ -159,6 +162,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            What is my ideal audience?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             What are we trying to acheive with a neural network?
           </Text>
         </Slide>
@@ -234,7 +242,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            XOR
+            XOR gate
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -362,17 +370,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Come back to what "linear" means
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Dot product
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Measure of agreement
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Increasing dot product == increasing "measure of agreement"
+            numjs does this for us
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -383,6 +391,11 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Replace "multiplication" with "dot product"
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Know where output comes from ...
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -449,7 +462,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Why?
+            What does "linear" mean?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Relationship between inputs determines network structure
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -496,8 +514,24 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Image src={images.andChart} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            "Linear neural network" == data is linearly separable
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.andChartWithBoundary} />
+        </Slide>
+        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Back to XOR
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Requires deep learning neural network
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -509,6 +543,14 @@ export default class Presentation extends React.Component {
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Need nonlinear behaviour
           </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Inputs not linearly separable
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.xorChart} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
