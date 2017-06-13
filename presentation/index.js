@@ -15,6 +15,12 @@ import {
   List,
   Quote,
   Slide,
+  Table,
+  TableBody,
+  TableHeader,
+  TableHeaderItem,
+  TableItem,
+  TableRow,
   Text
 } from "spectacle";
 
@@ -88,7 +94,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Determine correct response to traffic lights
+            Determine correct ouput of XOR gate
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -228,27 +234,50 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Traffic lights
+            XOR
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Input will be arrays of length 3
-          </Text>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHeaderItem>A</TableHeaderItem>
+                <TableHeaderItem>B</TableHeaderItem>
+                <TableHeaderItem>A XOR B</TableHeaderItem>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableItem>0</TableItem>
+                <TableItem>0</TableItem>
+                <TableItem>0</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>0</TableItem>
+                <TableItem>1</TableItem>
+                <TableItem>1</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>1</TableItem>
+                <TableItem>0</TableItem>
+                <TableItem>1</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>1</TableItem>
+                <TableItem>1</TableItem>
+                <TableItem>0</TableItem>
+              </TableRow>
+            </TableBody>
+          </Table>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            e.g. [1, 0, 1] corresponds to green and red lights turning on
+            Input will be arrays of length 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Output value will be 1 or 0
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            "walk" or "don't walk'"
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -273,7 +302,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Input layer will be three nodes
+            Input layer will be two nodes
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -282,16 +311,16 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Image src={images.multipleInputsToSingleOutput} />
+        </Slide>
+        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             How do we get output?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.multipleInputsToSingleOutput} />
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Strength of relationship given by a "weight"
+            Weight == strength of relationship
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -322,12 +351,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            O = 0.4 * A + 0.8 * B + 0.6 * C
+            O = 0.4 * A + 0.6 * B
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            O = 0.4 * A + 0.8 * B + 0.6 * C <br/>
+            O = 0.4 * A + 0.6 * B<br/>
             Important: This is linear
           </Text>
         </Slide>
@@ -349,6 +378,11 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             All examples will be single input node to single ouput node
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Replace "multiplication" with "dot product"
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -376,6 +410,21 @@ export default class Presentation extends React.Component {
             Mean 0, standard deviation 1
           </Text>
         </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Also choose weights between -1 and +1
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Mostly just to make things simple
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Everything comes back to how quickly network learns
+          </Text>
+        </Slide>
         <Slide bgColor="quartenary" notes="">
           <CodePane
             lang="js"
@@ -396,6 +445,59 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Want to find new correlations between input nodes
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Why?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            AND gate
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHeaderItem>A</TableHeaderItem>
+                <TableHeaderItem>B</TableHeaderItem>
+                <TableHeaderItem>A AND B</TableHeaderItem>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableItem>0</TableItem>
+                <TableItem>0</TableItem>
+                <TableItem>0</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>0</TableItem>
+                <TableItem>1</TableItem>
+                <TableItem>0</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>1</TableItem>
+                <TableItem>0</TableItem>
+                <TableItem>0</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>1</TableItem>
+                <TableItem>1</TableItem>
+                <TableItem>1</TableItem>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            This can be solved with a linear neural network
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Back to XOR
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -430,7 +532,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Final network will have hidden layer of 4 nodes
+            Final network will have hidden layer of 3 nodes
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -449,7 +551,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            H = 0.4 * A + 0.8 * B + 0.6 * C
+            H = 0.4 * A + 0.6 * C
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -457,12 +559,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            O = 0.5 * (0.4 * A + 0.8 * B + 0.6 * C)
+            O = 0.5 * (0.4 * A + 0.6 * C)
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            O = 0.2 * A + 0.4 * B + 0.3 * C
+            O = 0.2 * A + 0.3 * C
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -475,7 +577,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Activation function creates nonlinearities
+            Activation function introduces nonlinearities
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Determines if node is "on" or "off"
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Puts the neural in neural networks
           </Text>
         </Slide>
         <Slide bgColor="primary">
