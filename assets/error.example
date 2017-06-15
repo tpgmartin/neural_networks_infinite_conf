@@ -1,9 +1,9 @@
-const walkVsStop = nj.array([[1, 1, 0, 0]]).T
+const outputs = nj.array([[0, 1, 1, 0]]).T
 
 for (let iteration = 0; iteration < 60; iteration++) {
     let outputLayerError = 0
 
-    for (let i = 0; i < streetlights.shape[0]; i++) {
+    for (let i = 0; i < inputs.shape[0]; i++) {
         //  Feedforward step ...
 
         outputLayerError = nj.add(outputLayerError, nj.sum(nj.power((nj.subtract(outputLayer, walkVsStop.slice([i, i + 1]))), 2)))

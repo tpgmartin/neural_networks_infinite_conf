@@ -4,7 +4,7 @@ function relu(x) {
     return iterator(x, x => ((x > 0) * x))
 }
 
-function reluderiv(x) {
+function reluDeriv(x) {
     return iterator(x, x => ((x > 0) ? 1 : 0))
 }
 
@@ -20,17 +20,17 @@ function iterator(x, fn) {
     return nj.array(out)
 }
 
-const streetlights = nj.array([
-    [1, 0, 1],
-    [0, 1, 1],
-    [0, 0, 1],
-    [1, 1, 1]
+const inputs = nj.array([
+    [0, 0],
+    [0, 1],
+    [1, 0],
+    [1, 1]
 ])
 
-const walkVsStop = nj.array([[1, 1, 0, 0]]).T
+const outputs = nj.array([[0, 1, 1, 0]]).T
 
 const alpha = 0.2
-const hidden_size = 4
+const hidden_size = 3
 
-let weights_0_1 = nj.random([3, hidden_size]).multiply(2).subtract(1)
+let weights_0_1 = nj.random([2, hidden_size]).multiply(2).subtract(1)
 let weights_1_2 = nj.random([hidden_size, 1]).multiply(2).subtract(1)
