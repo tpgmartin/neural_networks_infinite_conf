@@ -38,6 +38,8 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   andChart: require("../assets/and_chart.png"),
   andChartWithBoundary: require("../assets/and_chart_with_boundary.png"),
+  errorFunction: require("../assets/error_function.png"),
+  errorFunctionWithDerivative: require("../assets/error_function_with_derivative.png"),
   hiddenLayerHighlighted: require("../assets/hidden_layer_highlighted.png"),
   linearExampleNoHiddenLayer: require("../assets/linear_example_no_hidden_layer.png"),
   linearExampleWithHiddenLayer: require("../assets/linear_example_with_hidden_layer.png"),
@@ -794,11 +796,6 @@ export default class Presentation extends React.Component {
             How much did given weight contribute to final error?
           </Text>
         </Slide>
-        <Slide bgColor="tertiary">
-          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
-            &lt;aside&gt;
-          </Text>
-        </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Find minimum of error function
@@ -835,14 +832,15 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            (parabolic curve)
-          </Text>
+          <Image src={images.errorFunction} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             outputDelta ~ prediction - target
           </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.errorFunctionWithDerivative} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
@@ -852,11 +850,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Local minimum is our goal weight
-          </Text>
-        </Slide>
-        <Slide bgColor="tertiary">
-          <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
-            &lt;/aside&gt;
           </Text>
         </Slide>
         <Slide bgColor="primary">
