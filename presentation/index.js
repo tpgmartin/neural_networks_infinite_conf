@@ -91,53 +91,48 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Investigate a learning problem
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Investigate a <br/> learning problem
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Determine correct ouput of XOR gate
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Build feed-forward network
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Show how this is set up
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Gonna get deep
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Implement gradient descent
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Implement <br/> gradient descent
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Work through three stages:
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Work through <br/> three stages:
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            1. Forward propagation
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            1. Forward <br/> propagation
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             2. Error calculation
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            3. Backward propagation
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            3. Backward <br/> propagation
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
@@ -146,88 +141,78 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Web developer <Link textColor="tertiary" href={"https://twitter.com/OpenTableTechUK"}>@OpenTable</Link>
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             My machine learning jounery started in 2016
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             "Learn, do, learn, teach"
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Ideal audience?
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             What are we trying to acheive with a neural network?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Learn how to determine output for given input
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Supervised learning
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Training data
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Train by matching inputs to known outputs
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Move to test case
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             "Learn"?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Minimise network error
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Adjust network in response to error calculation
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Equivalently ...
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Find correlation between inputs
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Correlations are where the magic happens
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            *Input nodes are not independent
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            *Input nodes are not independent
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Correlation is where <br/> the magic happens
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
@@ -236,12 +221,12 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Example we are going to follow
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Example we are <br/> going to follow
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             XOR gate
           </Text>
         </Slide>
@@ -279,50 +264,50 @@ export default class Presentation extends React.Component {
           </Table>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Input will be arrays of length 2
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Input will be <br/> arrays of length 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Output value will be 1 or 0
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Output value <br/> will be 1 or 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Network is made of layers and nodes
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Nodes are our "neurons"
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Node has value set in forward propagation
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Layer is set of nodes with common inputs
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Input layer will be two nodes
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Input layer will <br/> be two nodes
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Output layer will be one node
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Output layer will <br/> be one node
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Image src={images.multipleInputsToSingleOutput} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             How do we get output?
           </Text>
         </Slide>
@@ -330,30 +315,30 @@ export default class Presentation extends React.Component {
           <Image src={images.multipleInputsToSingleOutput} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Weight == strength of relationship
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Weight <br/> == <br/> strength of relationship
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Find output for given input node
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            For given input <br/> node find output
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Image src={images.multipleInputsToSingleOutput}/>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             output = input * weight
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            General case of multiple inputs
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            General case of <br/> multiple inputs
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Get weighted sum of inputs to that node
           </Text>
         </Slide>
@@ -361,83 +346,91 @@ export default class Presentation extends React.Component {
           <Image src={images.multipleInputsToSingleOutputWithWeights}/>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             O = 0.4 * A + 0.6 * B
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            O = 0.4 * A + 0.6 * B
+          </Text>
+          <Text margin="10px 0 0" textColor="secondary" size={1} bold>
+            Remember this!
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             On layer-by-layer basis
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Use dot product
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Product of given layer node values with weights
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Product of given <br/> layer node values <br/> with weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             numjs does this for us
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             All examples will be single input node to single ouput node
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Replace "multiplication" with "dot product"
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Know where output comes from ...
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Where do weights come from?
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Where do weights <br/> come from?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Randomly pick weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Limiting factor: how quickly network learns
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Sufficient to use normal distribution
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Sufficient to use <br/> normal distribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Mean 0, standard deviation 1
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            mean = 0 <br/> standard deviation = 1
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Also choose weights between -1 and +1
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Mostly just to make things simple
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Mostly just to <br/> make things simple
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Everything comes back to how quickly network learns
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Everything comes <br/> back to how <br/> quickly network learns
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -448,17 +441,17 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Have a neural network
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             We need to go deeper
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             AND gate
           </Text>
         </Slide>
@@ -496,7 +489,7 @@ export default class Presentation extends React.Component {
           </Table>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             This can be solved with a linear neural network
           </Text>
         </Slide>
@@ -507,31 +500,31 @@ export default class Presentation extends React.Component {
           <Image src={images.andChart} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Output is linearly separable
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Output is <br/> linearly separable
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Image src={images.andChartWithBoundary} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Condition for linear neural network
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Back to XOR
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Requires deep learning neural network
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Output not linearly separable
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Output not <br/> linearly separable
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -541,37 +534,37 @@ export default class Presentation extends React.Component {
           <Image src={images.multipleInputsToSingleOutput} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Something's missing
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Need nonlinear behaviour
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Add hidden layer
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Hidden layer creates intermediate correlation
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Correlation == some combination of nodes that produce an output
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Correlation <br/> == <br/> some combination <br/> of nodes that <br/> produce an output
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Choose number of layers and nodes that perform best
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Final network will have hidden layer of 3 nodes
           </Text>
         </Slide>
@@ -579,7 +572,7 @@ export default class Presentation extends React.Component {
           <Image src={images.threeLayerNetwork} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             ... still linear
           </Text>
         </Slide>
@@ -590,7 +583,7 @@ export default class Presentation extends React.Component {
           <Image src={images.linearExampleWithHiddenLayer} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             H = 0.4 * A + 0.6 * B
           </Text>
         </Slide>
@@ -598,12 +591,12 @@ export default class Presentation extends React.Component {
           <Image src={images.linearExampleWithHiddenLayer} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             O = 0.5 * (0.4 * A + 0.6 * B)
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             O = 0.2 * A + 0.3 * B
           </Text>
         </Slide>
@@ -611,37 +604,37 @@ export default class Presentation extends React.Component {
           <Image src={images.linearExampleNoHiddenLayer} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             How to solve this?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Activation function introduces nonlinearities
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Determines if node is "on" or "off"
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Determines if node <br/> is "on" or "off"
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Puts the "neural" in neural networks
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Puts the "neural" <br/> in neural networks
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             relu function
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             if input &#60; 0 then return 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             else return input
           </Text>
         </Slide>
@@ -653,13 +646,13 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Have deep learning neural network!
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Can implement gradient descent
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Can implement <br/> gradient descent
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
@@ -668,23 +661,23 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Iteratively find output for given input
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Layer by layer, node by node
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Layer by layer, <br/> node by node
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             At each layer find dot product of weights with input to that layer
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            At hidden layer, plug through activation function
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            At hidden layer, <br/> plug through <br/> activation function
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -695,7 +688,7 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Network generates output
           </Text>
         </Slide>
@@ -705,37 +698,37 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Why do we measure error?
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Why do we <br/> measure error?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            How do we know network output is any good?
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            How do we know <br/> network output <br/> is any good?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Want network to learn training set
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Want network to <br/> learn training set
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Learning is just reducing the error
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            How do we qualify error?
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            How do we <br/> quantify error?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Many different ways to quantify this
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Many different ways <br/> to quantify this
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Use mean squared error
           </Text>
         </Slide>
@@ -745,23 +738,13 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            *This is an assumption
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            But general idea still holds
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             error &ge; 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            The lower the value the better
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            The lower the <br/> value the better
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -777,37 +760,37 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Error tells us how well we're doing
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Error tells us how <br/> well we're doing
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            How do we improve this?
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            How do we <br/> improve this?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             What can we do?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Can only adjust weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Determine amount to adjust weights in previous layer
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Back propagation is a process of error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             How much did given weight contribute to final error?
           </Text>
         </Slide>
@@ -817,57 +800,57 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Find minimum of error function
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Error is measure of how well network is performing
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Choose largest change in error function with each iteration
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             This is the derivative of error function
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Gradient at given point
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             For output layer this is easy
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             error = (prediction - target) ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             (parabolic curve)
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             outputDelta ~ prediction - target
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Convergence to local minimum is guaranteed
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Local minimum is our goal weight
           </Text>
         </Slide>
@@ -877,27 +860,27 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Work Backwards, layer by layer
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Found output layer delta
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             What is change to weights connecting hidden and output layers?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             weightUpdate = input * outputDelta
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             What about the input-hidden layer weights?
           </Text>
         </Slide>
@@ -905,114 +888,114 @@ export default class Presentation extends React.Component {
           <Image src={images.threeLayerNetwork} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Find derivative of output function at hidden layer node
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Change to hidden layer node complicated by activation function
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Found outputDelta was just derivative of output function
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             ... some calculus later ...
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             hiddenDelta = outputDelta * weight_h_o * reluDeriv(input * weight_i_h)
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             How to think about reluDeriv?
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Said backward propagation is about error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             relu gave us a weight &ge; 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             So either weight did or didn't contribute to error
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             "did" == 1, "didn't" == 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             hiddenDelta = outputDelta * weight_h_o
             or
             hiddenDelta = 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Finally update weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             weightDelta = input * delta
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Not done yet
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Possible divergence of weight updates
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Weight update scales with input value
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             weightDelta = input * delta
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Could be very large, even for a small error
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             (Example of divergent weight update)
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Learning rate, alpha
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             weight -= alpha * weightDelta
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Just choose alpha that works for us
           </Text>
         </Slide>
@@ -1048,27 +1031,27 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Matched network to learning problem
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Created a neural network with input, ouput and single hidden layers
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Showed why we need hidden layer
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Demonstrated gradient descent
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Successfully trained deep learning neural network
           </Text>
         </Slide>
