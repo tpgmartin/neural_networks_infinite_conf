@@ -736,7 +736,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            error = (prediction - target) ** 2
+            error = (output - target) ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -788,47 +788,57 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Back propagation is a process of error attribution
+            Backpropagation is a process of error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            How much did given weight contribute to final error?
+            Work backwards through the network
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Find minimum of error function
+            Determine which weight, and by how much, weight contributed to final error
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Error is measure of how well network is performing
+            Gradient descent
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Choose largest change in error function with each iteration
+            Want to minimise network error
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            This is the derivative of error function
+            No explicit link between error and weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Gradient at given point
+            Simplist case of single input to single output
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            For output layer this is easy
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            error = (output - target) ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            error = (prediction - target) ** 2
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            output = input * weight
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            error = ((input * weight) - target) ** 2
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            error ~ weight ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -836,7 +846,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            outputDelta ~ prediction - target
+            Goal weight is just minimum
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            For given change <br/> in weight
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            What is change <br/> in error?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Find the derivative
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -844,37 +869,60 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Convergence to local minimum is guaranteed
+            Derivative gives relationship <br/> between variables
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            derivative ~ input * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Local minimum is our goal weight
+            Change to weight is just negative of derivative
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            weight -= input * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Work Backwards, layer by layer
+            Do this iteratively until getting to minimum
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Found output layer delta
+            Weight update always <br/> negative of derivative
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.errorFunction} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Convergence to minimum is guaranteed
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            What is change to weights connecting hidden and output layers?
+            This gives us output layer delta
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            weightUpdate = input * outputDelta
+            Can update weights connecting hidden layer and output layer
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            What about the input-hidden layer weights?
+            Update to other weights is the same
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Complicated by activation function
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -964,7 +1012,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            weightDelta = input * delta
+            derivative ~ input * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -973,9 +1021,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            (Example of divergent weight update)
-          </Text>
+          <Image src={images.errorFunction} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
@@ -984,7 +1030,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            weight -= alpha * weightDelta
+            weight -= alpha * input * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
