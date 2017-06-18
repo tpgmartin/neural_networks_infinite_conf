@@ -749,6 +749,16 @@ export default class Presentation extends React.Component {
             The lower the <br/> value the better
           </Text>
         </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            MSE easy to track
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Convergence to goal weight guaranteed*
+          </Text>
+        </Slide>
         <Slide bgColor="quartenary" notes="">
           <CodePane
             lang="js"
@@ -861,6 +871,16 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Gradient descent is greedy
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Choose change in weight that changes error most
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Find the derivative
           </Text>
         </Slide>
@@ -878,8 +898,26 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Image src={images.errorFunctionWithDerivative} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            ∆weight = input * (output - target)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            ∆error = ∆weight * (input * (output - target))
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Change to weight is just negative of derivative
+            Change to weight is always negative of derivative
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            weight = weight - ∆weight
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -889,7 +927,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Do this iteratively until getting to minimum
+            Do this iteratively until convergening to minimum
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -902,7 +940,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Convergence to minimum is guaranteed
+            Convergence to minimum is guaranteed*
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            *at least for our error function
           </Text>
         </Slide>
         <Slide bgColor="primary">
