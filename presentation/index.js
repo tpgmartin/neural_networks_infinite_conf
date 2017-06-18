@@ -99,7 +99,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Determine correct ouput of XOR gate
+            Determine correct output of XOR gate
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -159,6 +159,21 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Why the hype?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Better performance than traditional ML approaches
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Generic solutions
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             What are we trying to acheive with a neural network?
           </Text>
         </Slide>
@@ -189,7 +204,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            "Learn"?
+            "Learning"?
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -209,7 +224,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            *Input nodes are not independent
+            *Input nodes are <br/> not independent
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -283,11 +298,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Nodes are our "neurons"
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Node has value set in forward propagation
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -382,7 +392,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            All examples will be single input node to single ouput node
+            All examples will be single input node to single output node
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -751,12 +761,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            MSE easy to track
+            Easy to track
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Convergence to goal weight guaranteed*
+            Convergence guaranteed*
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -808,7 +818,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Determine which weight, and by how much, weight contributed to final error
+            Determine which weight and how much
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Weight contributed to final error
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -823,12 +838,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            No explicit link between error and weights
+            Make link between error and weights explicit
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Simplist case of single hidden layer node to ouput
+            Simplist case of single hidden layer node to output
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -856,7 +871,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Goal weight is just minimum
+            Goal weight is <br/> just minimum
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -871,7 +886,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Gradient descent is greedy
+            Gradient descent <br/> is greedy
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1119,7 +1134,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Created a neural network with input, ouput and single hidden layers
+            Created a neural network with input, output and single hidden layers
           </Text>
         </Slide>
         <Slide bgColor="primary">
