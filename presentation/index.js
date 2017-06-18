@@ -828,7 +828,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Simplist case of single input to single output
+            Simplist case of single hidden layer node to ouput
           </Text>
         </Slide>
         <Slide bgColor="primary">
