@@ -540,15 +540,15 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            No correlation between input and output nodes
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
           <Image src={images.xorChart} />
         </Slide>
         <Slide bgColor="primary">
           <Image src={images.multipleInputsToSingleOutput} />
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Something's missing
-          </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
@@ -628,6 +628,11 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Determines if node <br/> is "on" or "off"
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Ensures we get "extra" correlations
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -926,6 +931,16 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            delta = output - target
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            ∆weight = input * delta
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Change to weight is always negative of derivative
           </Text>
@@ -970,7 +985,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            This gives us output layer delta
+            outputLayerDelta = outputLayer - target
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            hiddenOutputWeights -= hiddenLayer * outputLayerDelta
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -980,12 +1000,27 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Update to other weights is the same
+            Update to other weights connecting input and hidden layer is the same
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Complicated by activation function
+            ∆weight = input * delta
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Find delta
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Complicated by activation function ...
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            ... and outputLayerDelta
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -998,22 +1033,27 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Change to hidden layer node complicated by activation function
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Found outputDelta was just derivative of output function
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             ... some calculus later ...
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            hiddenDelta = outputDelta * weight_h_o * reluDeriv(input * weight_i_h)
+            derivative ~ input * reluDeriv(input * weight)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            delta is scaled by outputLayerDelta
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            delta = outputLayerDelta * weight * reluDeriv(input * weight)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            ∆weight = input * (outputLayerDelta * weight * reluDeriv(input * weight))
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1051,11 +1091,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Finally update weights
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            weightDelta = input * delta
           </Text>
         </Slide>
         <Slide bgColor="primary">
