@@ -1134,12 +1134,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Created a neural network with input, output and single hidden layers
+            Created a deep learning neural network layers
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Showed why we need hidden layer
+            Justified choices
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1156,6 +1156,14 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Thank You
           </Heading>
+          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+            Tom Martin <Link textColor="tertiary" href={"https://twitter.com/tpgmartin"}>@tpgmartin</Link>
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Join at sli.do with <Link textColor="tertiary" href={"https://app.sli.do/?search=BrownBag"}>#BrownBag</Link>
+          </Text>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
             Tom Martin <Link textColor="tertiary" href={"https://twitter.com/tpgmartin"}>@tpgmartin</Link>
           </Text>
