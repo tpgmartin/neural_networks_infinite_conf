@@ -955,7 +955,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Convergence to minimum is guaranteed*
+            Convergence to minimum is guaranteed-ish
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Goal weight is global minimum*
           </Text>
         </Slide>
         <Slide bgColor="primary">
