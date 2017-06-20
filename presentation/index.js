@@ -38,6 +38,7 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   andChart: require("../assets/and_chart.png"),
   andChartWithBoundary: require("../assets/and_chart_with_boundary.png"),
+  backpropagationExample: require("../assets/backpropagation_example.png"),
   errorFunction: require("../assets/error_function.png"),
   errorFunctionWithDerivative: require("../assets/error_function_with_derivative.png"),
   hiddenLayerHighlighted: require("../assets/hidden_layer_highlighted.png"),
@@ -823,12 +824,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Determine which weight and how much
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Weight contributed to final error
+            Determine how change in weight affected error
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -852,6 +848,9 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Image src={images.backpropagationExample} />
+        </Slide>
+        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             error = (output - target) ** 2
           </Text>
@@ -863,12 +862,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            error = ((input * weight) - target) ** 2
+            output = w_ho * H
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            error ~ weight ** 2
+            error = ((w_ho * H) - target) ** 2
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            error ~ w_ho ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -927,22 +931,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            delta = output - target
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            delta == change required to minimise error
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             Derivative gives actual response to delta
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative = input * delta
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -990,16 +979,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            outputLayerDelta = outputLayer - target
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            hiddenOutputWeights -= hiddenLayer * outputLayerDelta
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Can update weights connecting hidden layer and output layer
           </Text>
         </Slide>
@@ -1010,7 +989,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Find delta
+            Find derivative
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1019,16 +998,54 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            ... and outputLayerDelta
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
           <Image src={images.threeLayerNetwork} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Find derivative of output function at hidden layer node
+            Want to minimise error function
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.backpropagationExample} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Find change in error function with change in weight between input and hidden layer
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            error = (output - target) ** 2
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Give output in terms of w_ih
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            output = w_ho * H
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            H = relu(A * w_ih)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            output = w_ho * relu(A * w_ih)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            error = (w_ho * relu(A * w_ih) - target) ** 2
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Find derivative of error function with respect to w_ih
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1038,22 +1055,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            derivative ~ input * reluDeriv(input * weight)
+            derivative ~ (output - target) * w_ho * reluDeriv(A * w_ih) * A
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            delta is scaled by outputLayerDelta
+            derivative ~ delta * w_ho * reluDeriv(A * w_ih) * A
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            delta = outputLayerDelta * weight * reluDeriv(input * weight)
+            Multply by w_ho to back propagate error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            ∆weight = input * (outputLayerDelta * weight * reluDeriv(input * weight))
+            reluDeriv = (x) => (x > 0 ? 1 : 0)
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1078,14 +1095,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            "did" == 1, "didn't" == 0
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            hiddenDelta = outputDelta * weight_h_o
-            or
-            hiddenDelta = 0
+            1 == "did", 0 == "didn't"
           </Text>
         </Slide>
         <Slide bgColor="primary">
