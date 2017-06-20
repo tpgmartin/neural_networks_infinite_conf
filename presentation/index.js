@@ -1071,7 +1071,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            relu gave us a weight &ge; 0
+            relu gave us an output &ge; 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
