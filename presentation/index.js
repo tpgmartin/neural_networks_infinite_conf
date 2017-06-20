@@ -628,12 +628,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Determines if node <br/> is "on" or "off"
+            Ensures we get "extra" correlations
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Ensures we get "extra" correlations
+            Determines if node <br/> is "on" or "off"
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -742,11 +742,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Many different ways <br/> to quantify this
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Use mean squared error
           </Text>
         </Slide>
@@ -757,22 +752,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            error &ge; 0
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            The lower the <br/> value the better
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Easy to track
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Convergence guaranteed*
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            error &ge; 0
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            The lower the <br/> value the better
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -809,7 +804,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Determine amount to adjust weights in previous layer
+            Determine amount to adjust weights in previous layers
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -824,7 +819,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Determine how change in weight affected error
+            Determine how change in weight affects error
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -862,12 +857,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            output = w_ho * H
+            output = H * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            error = ((w_ho * H) - target) ** 2
+            error = ((H * w_ho) - target) ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -909,16 +904,8 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.errorFunctionWithDerivative} />
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Derivative gives relationship <br/> between variables
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative ~ input * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -931,13 +918,16 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Derivative gives actual response to delta
+            derivative ~ input * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Change to weight is always negative of derivative
           </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.errorFunction} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -956,25 +946,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Weight update always <br/> negative of derivative
+            Goal weight is global minimum
           </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Image src={images.errorFunction} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Convergence to minimum is guaranteed-ish
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Goal weight is global minimum*
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            *at least for our error function
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -998,7 +975,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.threeLayerNetwork} />
+          <Image src={images.backpropagationExample} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
@@ -1014,32 +991,38 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             error = (output - target) ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Give output in terms of w_ih
+            Give output in <br /> terms of w_ih
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            output = w_ho * H
+          <Image src={images.backpropagationExample} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            output = H * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Image src={images.backpropagationExample} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             H = relu(A * w_ih)
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             output = w_ho * relu(A * w_ih)
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             error = (w_ho * relu(A * w_ih) - target) ** 2
           </Text>
         </Slide>
@@ -1054,13 +1037,23 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             derivative ~ (output - target) * w_ho * reluDeriv(A * w_ih) * A
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             derivative ~ delta * w_ho * reluDeriv(A * w_ih) * A
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            What is the intuition <br/> behind this?
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Said backward propagation is about error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1069,18 +1062,11 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Image src={images.backpropagationExample} />
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             reluDeriv = (x) => (x > 0 ? 1 : 0)
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            How to think about reluDeriv?
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Said backward propagation is about error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1100,12 +1086,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Finally update weights
+            Found derivatives
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Not done yet
+            Does this converge to goal weight?
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1119,7 +1105,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             derivative ~ input * (output - target)
           </Text>
         </Slide>
@@ -1137,7 +1123,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             weight -= alpha * input * (output - target)
           </Text>
         </Slide>
