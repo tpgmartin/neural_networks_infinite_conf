@@ -922,12 +922,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            ∆weight = input * (output - target)
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            ∆error = ∆weight * (input * (output - target))
+            ∆error = derivative * ∆weight
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -937,7 +932,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            ∆weight = input * delta
+            delta == change required to minimise error
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Derivative gives actual response to delta
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            derivative = input * delta
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -947,7 +952,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            weight = weight - ∆weight
+            weight = weight - derivative
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1001,11 +1006,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Update to other weights connecting input and hidden layer is the same
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            ∆weight = input * delta
           </Text>
         </Slide>
         <Slide bgColor="primary">

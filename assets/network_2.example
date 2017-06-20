@@ -2,20 +2,19 @@ for (let iteration = 0; iteration < 60; iteration++) {
     let outputLayerError = 0
 
     for (let i = 0; i < inputs.shape[0]; i++) {
-        let layer_0 = inputs.slice([i, i + 1])
-        let layer_1 = relu(nj.dot(layer_0, weights_0_1))
-        let outputLayer = nj.dot(layer_1, weights_1_2)
+        let inputLayer = inputs.slice([i, i + 1])
+        let hiddenLayer = relu(nj.dot(inputLayer, inputHiddenWeights))
+        let outputLayer = nj.dot(hiddenLayer, hiddenOutputWeights)
 
-        outputLayerError = nj.add(outputLayerError, nj.sum(nj.power((nj.subtract(outputLayer, ouputs.slice([i, i + 1]))), 2)))
+        outputLayerError = nj.add(outputLayerError, nj.sum(nj.power((nj.subtract(outputLayer, outputs.slice([i, i + 1]))), 2)))
 
-        let layer_2_delta = nj.subtract(outputLayer, ouputs.slice([i, i + 1]))
-        let layer_1_delta = nj.multiply(layer_2_delta.dot(weights_1_2.T), relu2deriv(layer_1))
+        let outputLayerDelta = nj.subtract(outputLayer, outputs.slice([i, i + 1]))
+        let hiddenLayerDelta = nj.multiply(outputLayerDelta.dot(hiddenOutputWeights.T), relu2deriv(hiddenLayer))
 
-        weights_1_2 = nj.subtract(weights_1_2, layer_1.T.dot(layer_2_delta).multiply(alpha))
-        weights_0_1 = nj.subtract(weights_0_1, layer_0.T.dot(layer_1_delta).multiply(alpha))
+        hiddenOutputWeights = nj.subtract(hiddenOutputWeights, hiddenLayer.T.dot(outputLayerDelta).multiply(alpha))
+        inputHiddenWeights = nj.subtract(inputHiddenWeights, inputLayer.T.dot(hiddenLayerDelta).multiply(alpha))
     }
 
     if (iteration % 10 == 9) {
         console.log(`Error: ${outputLayerError.tolist()}`)
     }
-}
