@@ -978,32 +978,6 @@ export default class Presentation extends React.Component {
           <Image src={images.backpropagationExample} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Want to minimise error function
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Image src={images.backpropagationExample} />
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Find change in error function with change in weight between input and hidden layer
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            error = (output - target) ** 2
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Give output in <br /> terms of w_ih
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Image src={images.backpropagationExample} />
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             output = H * w_ho
           </Text>
@@ -1018,12 +992,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            output = w_ho * relu(A * w_ih)
+            output = relu(A * w_ih) * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            error = (w_ho * relu(A * w_ih) - target) ** 2
+            error = (relu(A * w_ih) * w_ho - target) ** 2
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1038,17 +1012,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative ~ (output - target) * w_ho * reluDeriv(A * w_ih) * A
+            derivative ~ (output - target) * reluDeriv(A * w_ih) * A * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative ~ delta * w_ho * reluDeriv(A * w_ih) * A
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            What is the intuition <br/> behind this?
+            derivative ~ delta * reluDeriv(A * w_ih) * A * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1058,7 +1027,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Multply by w_ho to back propagate error attribution
+            Multiply by w_ho to back propagate error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1091,7 +1060,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Does this converge to goal weight?
+            Do weights converge to goal?
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1107,11 +1076,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             derivative ~ input * (output - target)
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Could be very large, even for a small error
           </Text>
         </Slide>
         <Slide bgColor="primary">
