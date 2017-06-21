@@ -393,7 +393,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            All examples will be single input node to single output node
+            All examples will be single node to single node
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -418,7 +418,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Limiting factor: how quickly network learns
+            Influence how quickly network learns
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -568,7 +568,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Correlation <br/> == <br/> some combination <br/> of nodes that <br/> produce an output
+            Correlation <br/> == <br/> some combination <br/> of nodes that <br/> produce an activation
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            activation = input * weight
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -680,22 +685,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Iteratively find output for given input
+            Iteratively find activation for given input
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Layer by layer, <br/> node by node
+            Layer by layer<br/>node by node
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            At each layer find dot product of weights with input to that layer
+            inputs • weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            At hidden layer, <br/> plug through <br/> activation function
+            relu(inputs • weights)
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -752,22 +757,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Easy to track
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Convergence guaranteed*
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             error &ge; 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             The lower the <br/> value the better
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Easy to track
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            Convergence guaranteed*
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -794,22 +799,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            What can we do?
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             Can only adjust weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Determine amount to adjust weights in previous layers
+            Backpropagation is a process of error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            Backpropagation is a process of error attribution
+            Determine amount to adjust weights in previous layers
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -931,7 +931,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            weight = weight - derivative
+            weight - derivative
           </Text>
         </Slide>
         <Slide bgColor="primary">
