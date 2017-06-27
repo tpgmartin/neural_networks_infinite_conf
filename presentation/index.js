@@ -44,7 +44,6 @@ const images = {
   hiddenLayerHighlighted: require("../assets/hidden_layer_highlighted.png"),
   linearExampleNoHiddenLayer: require("../assets/linear_example_no_hidden_layer.png"),
   linearExampleWithHiddenLayer: require("../assets/linear_example_with_hidden_layer.png"),
-  multipleInputsToSingleOutput: require("../assets/multiple_inputs_to_single_output.png"),
   multipleInputsToSingleOutputWithWeights: require("../assets/multiple_inputs_to_single_output_with_weights.png"),
   singleInputToSingleOutput: require("../assets/single_input_to_single_output.png"),
   threeLayerNetwork: require("../assets/three_layer_network.png"),
@@ -143,7 +142,8 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            3. backward <br/> propagation
+            3. backward propagation & <br />
+            gradient descent
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
@@ -320,7 +320,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.multipleInputsToSingleOutput} />
+          <Image src={images.multipleInputsToSingleOutputWithWeights} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
@@ -362,30 +362,30 @@ export default class Presentation extends React.Component {
             restrictions come <br/> back to how <br/> quickly network learns
           </Text>
         </Slide>
-        <Slide bgColor="quartenary" notes="">
+        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/weight_initialisation.example")}
             margin="20px auto"
-            style={{ "font-size": "1em" }}
+            style={{ "font-size": "0.7em" }}
           />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            how do we get output?
+            how do we get activation?
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            for given input <br/> node find output
+            for given input <br/> node find activation
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.multipleInputsToSingleOutput}/>
+          <Image src={images.multipleInputsToSingleOutputWithWeights}/>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            output = input * weight
+            O = A * 0.4
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -403,12 +403,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            O = 0.4 * A + 0.6 * B
+            O = A * 0.4 + B * 0.6
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            O = 0.4 * A + 0.6 * B
+            O = A * 0.4 + B * 0.6
           </Text>
           <Text margin="10px 0 0" textColor="secondary" size={1} bold>
             remember this!
@@ -503,7 +503,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.multipleInputsToSingleOutput} />
+          <Image src={images.multipleInputsToSingleOutputWithWeights} />
         </Slide>
         <Slide bgColor="primary">
           <Image src={images.andChart} />
@@ -523,7 +523,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            correlation between input and output nodes as is
+            exists correlation between input and output nodes
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -545,7 +545,7 @@ export default class Presentation extends React.Component {
           <Image src={images.xorChart} />
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.multipleInputsToSingleOutput} />
+          <Image src={images.multipleInputsToSingleOutputWithWeights} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
@@ -565,11 +565,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             correlation <br/> == <br/> some combination <br/> of nodes that <br/> produce an activation
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            activation = input * weight
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -598,7 +593,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            H = 0.4 * A + 0.6 * B
+            H = A * 0.4 + B * 0.6
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -606,12 +601,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            O = 0.5 * (0.4 * A + 0.6 * B)
+            O = (A * 0.4 + B * 0.6) * 0.5
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            O = 0.2 * A + 0.3 * B
+            O = A * 0.2 + B * 0.3
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -657,12 +652,12 @@ export default class Presentation extends React.Component {
             else return input
           </Text>
         </Slide>
-        <Slide bgColor="quartenary" notes="">
+        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/relu.example")}
             margin="20px auto"
-            style={{ "font-size": "1em" }}
+            style={{ "font-size": "0.7em" }}
           />
         </Slide>
         <Slide bgColor="primary">
@@ -692,20 +687,20 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            inputs • weights
+            nodes • weights
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            relu(inputs • weights)
+            relu(nodes • weights)
           </Text>
         </Slide>
-        <Slide bgColor="quartenary" notes="">
+        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/forward_propagation.example")}
             margin="20px auto"
-            style={{ "font-size": "1em" }}
+            style={{ "font-size": "0.5em" }}
           />
         </Slide>
         <Slide bgColor="primary">
@@ -773,17 +768,17 @@ export default class Presentation extends React.Component {
             convergence guaranteed*
           </Text>
         </Slide>
-        <Slide bgColor="quartenary" notes="">
+        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/error.example")}
             margin="20px auto"
-            style={{ "font-size": "1em" }}
+            style={{ "font-size": "0.7em" }}
           />
         </Slide>
         <Slide bgColor="tertiary">
           <Text margin="10px 0 0" textColor="primary" size={1} fit bold>
-            Backward propagation
+            Backward propagation & <br/> gradient descent
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -833,11 +828,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            make link between error and weights explicit
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             simplest case of single hidden layer node to output
           </Text>
         </Slide>
@@ -851,12 +841,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            output = input * weight
+            output = activation * weight
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            output = H * w_ho
+            O = H * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -903,12 +893,12 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
+          <Image src={images.errorFunctionWithDerivative} />
+        </Slide>
+        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             derivative gives relationship <br/> between variables
           </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Image src={images.errorFunctionWithDerivative} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -917,7 +907,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative ~ input * (output - target)
+            derivative ~ activation * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -930,17 +920,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            weight - derivative
+            weight_new = weight_old - derivative
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            weight -= input * (output - target)
+            weight -= activation * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            do this iteratively until convergening to minimum
+            do this iteratively until converging to minimum
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -950,7 +940,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            convergence to minimum is guaranteed-ish
+            can guarantee* convergence to minimum
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -965,11 +955,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            find derivative
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             complicated by activation function
           </Text>
         </Slide>
@@ -978,7 +963,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            output = H * w_ho
+            O = H * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -991,7 +976,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            output = relu(A * w_ih) * w_ho
+            O = relu(A * w_ih) * w_ho
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1074,7 +1059,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative ~ input * (output - target)
+            derivative ~ activation * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1087,7 +1072,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            weight -= alpha * input * (output - target)
+            weight -= alpha * activation * (output - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">
