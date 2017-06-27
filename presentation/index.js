@@ -3,17 +3,11 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  BlockQuote,
-  Cite,
-  Code,
   CodePane,
   Deck,
   Heading,
   Image,
   Link,
-  ListItem,
-  List,
-  Quote,
   Slide,
   Table,
   TableBody,
@@ -40,6 +34,8 @@ const images = {
   andChartWithBoundary: require("../assets/and_chart_with_boundary.png"),
   backpropagationExample: require("../assets/backpropagation_example.png"),
   errorFunction: require("../assets/error_function.png"),
+  errorFunctionDivergenceExample: require("../assets/error_function_divergence_example.png"),
+  errorFunctionWeightUpdate: require("../assets/error_function_weight_update.png"),
   errorFunctionWithDerivative: require("../assets/error_function_with_derivative.png"),
   hiddenLayerHighlighted: require("../assets/hidden_layer_highlighted.png"),
   linearExampleNoHiddenLayer: require("../assets/linear_example_no_hidden_layer.png"),
@@ -362,7 +358,7 @@ export default class Presentation extends React.Component {
             restrictions come <br/> back to how <br/> quickly network learns
           </Text>
         </Slide>
-        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
+        <Slide bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/weight_initialisation.example")}
@@ -373,11 +369,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             how do we get activation?
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            for given input <br/> node find activation
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -426,7 +417,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            O = [A, B] • [0.4, 0.6]
+            O = [A, B] • [0.4, 0.6]^T
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -652,7 +643,7 @@ export default class Presentation extends React.Component {
             else return input
           </Text>
         </Slide>
-        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
+        <Slide bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/relu.example")}
@@ -667,7 +658,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            can implement <br/> gradient descent
+            can implement <br/> backward propagation
           </Text>
         </Slide>
         <Slide bgColor="tertiary">
@@ -695,7 +686,7 @@ export default class Presentation extends React.Component {
             relu(nodes • weights)
           </Text>
         </Slide>
-        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
+        <Slide bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/forward_propagation.example")}
@@ -768,7 +759,7 @@ export default class Presentation extends React.Component {
             convergence guaranteed*
           </Text>
         </Slide>
-        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
+        <Slide bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/error.example")}
@@ -798,32 +789,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            backpropagation is a process of error attribution
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            determine amount to adjust weights in previous layers
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             work backwards through the network
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            determine how change in weight affects error
+            determine how change in given weight affects error
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            gradient descent
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            want to minimise network error
+            update weights using gradient descent
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -893,12 +869,12 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.errorFunctionWithDerivative} />
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             derivative gives relationship <br/> between variables
           </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Image src={images.errorFunctionWithDerivative} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -916,7 +892,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.errorFunction} />
+          <Image src={images.errorFunctionWeightUpdate} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
@@ -1006,7 +982,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            said backward propagation is about error attribution
+            backward propagation is about error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1024,7 +1000,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            relu gave us an output &ge; 0
+            relu gave us <br /> an output &ge; 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1039,12 +1015,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            found derivatives
+            found weight updates
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            do weights converge to goal?
+            do weights <br /> converge to goal?
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1063,7 +1039,7 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.errorFunction} />
+          <Image src={images.errorFunctionDivergenceExample} />
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
@@ -1085,7 +1061,7 @@ export default class Presentation extends React.Component {
             alpha has impact on rate of convergence
           </Text>
         </Slide>
-        <Slide maxHeight="none" maxWidth="none" bgColor="quartenary" notes="">
+        <Slide bgColor="quartenary" notes="">
           <CodePane
             lang="js"
             source={require("raw-loader!../assets/learning_rate.example")}
