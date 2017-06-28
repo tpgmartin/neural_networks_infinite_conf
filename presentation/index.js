@@ -179,7 +179,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            what are we trying to achieve with a neural network?
+            what are we trying <br/> to achieve with a <br/> neural network?
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -225,11 +225,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             find correlation between inputs
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            *input nodes are <br/> not independent
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -302,7 +297,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            layer is set of nodes with common inputs
+            layer is set of nodes with common inputs and outputs
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -422,17 +417,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            product of given <br/> layer node values <br/> with weights
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             numjs does this for us
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            all examples will be single node to single node
+            all examples will <br/> be single node <br/> to single node
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -536,9 +526,6 @@ export default class Presentation extends React.Component {
           <Image src={images.xorChart} />
         </Slide>
         <Slide bgColor="primary">
-          <Image src={images.multipleInputsToSingleOutputWithWeights} />
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             need nonlinear behaviour
           </Text>
@@ -556,11 +543,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             correlation <br/> == <br/> some combination <br/> of nodes that <br/> produce an activation
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            choose number of layers and nodes that perform best
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -668,7 +650,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            iteratively find activation for given input
+            iteratively find <br/> activation for <br/> given input
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -721,7 +703,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            learning is just reducing the error
+            learning is just <br/> minimising the error
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -752,11 +734,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             easy to track
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            convergence guaranteed*
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
@@ -794,7 +771,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            determine how change in given weight affects error
+            determine how <br/> change in given <br/> weight affects error
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -896,11 +873,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            weight_new = weight_old - derivative
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             weight -= activation * (output - target)
           </Text>
         </Slide>
@@ -962,11 +934,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            find derivative of error function with respect to w_ih
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             ... some calculus later ...
           </Text>
         </Slide>
@@ -976,13 +943,8 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative ~ delta * reluDeriv(A * w_ih) * A * w_ho
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            backward propagation is about error attribution
+            backward <br /> propagation <br /> is about error <br /> attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -994,18 +956,18 @@ export default class Presentation extends React.Component {
           <Image src={images.backpropagationExample} />
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            reluDeriv = (x) => (x > 0 ? 1 : 0)
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             relu gave us <br /> an output &ge; 0
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            so either weight did or didn't contribute to error
+            so either weight <br/> did or didn't <br/> contribute to error
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            reluDeriv = (x) => (x > 0 ? 1 : 0)
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1053,7 +1015,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            just choose alpha that works for us
+            just choose alpha <br/> that works for us
           </Text>
         </Slide>
         <Slide bgColor="primary">
