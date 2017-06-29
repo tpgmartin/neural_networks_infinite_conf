@@ -1058,7 +1058,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            demonstrated gradient descent
+            demonstrated backpropagation
           </Text>
         </Slide>
         <Slide bgColor="primary">
