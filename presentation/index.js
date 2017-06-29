@@ -673,7 +673,7 @@ export default class Presentation extends React.Component {
             lang="js"
             source={require("raw-loader!../assets/forward_propagation.example")}
             margin="20px auto"
-            style={{ "font-size": "0.5em" }}
+            style={{ "font-size": "0.7em" }}
           />
         </Slide>
         <Slide bgColor="primary">
@@ -992,7 +992,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            weight update scales with input value
+            weight update scales with activation value
           </Text>
         </Slide>
         <Slide bgColor="primary">
