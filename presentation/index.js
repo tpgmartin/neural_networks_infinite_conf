@@ -1048,7 +1048,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            created a deep learning neural network layers
+            created a deep learning neural network
           </Text>
         </Slide>
         <Slide bgColor="primary">
