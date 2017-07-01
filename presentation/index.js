@@ -587,17 +587,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            how to solve this?
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             activation function introduces nonlinearities
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            ensures we get "extra" correlations
+            ensures hidden layer activation not just reducible to sum of input nodes
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            O = A * 0.2 + B * 0.3
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -655,7 +655,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            layer by layer<br/>node by node
+            layer by layer
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -708,12 +708,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            how do we <br/> quantify error?
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            use mean squared error
+            use squared error
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -883,7 +878,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            goal weight is global minimum
+            goal weight is <br /> global minimum
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -944,7 +939,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            backward <br /> propagation <br /> is about error <br /> attribution
+            backward propagation is about error attribution
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -1005,7 +1000,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            learning rate, alpha
+            learning rate
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
+            alpha
           </Text>
         </Slide>
         <Slide bgColor="primary">
