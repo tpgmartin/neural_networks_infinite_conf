@@ -855,7 +855,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            derivative ~ activation * (output - target)
+            derivative ~ H * (O - target)
           </Text>
         </Slide>
         <Slide bgColor="primary">

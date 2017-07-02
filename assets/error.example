@@ -1,10 +1,10 @@
 for (let iteration = 0; iteration < 60; iteration++) {
-    let outputLayerError = 0
+    let error = 0
 
     for (let i = 0; i < inputs.shape[0]; i++) {
-        //  Feedforward step ...
+        //  Forward propagation step ...
 
-        error = nj.add(outputLayerError, nj.sum(nj.power((
+        error = nj.add(error, nj.sum(nj.power((
             nj.subtract(outputLayer, outputs.slice([i, i + 1]))), 2)
         ))
 
