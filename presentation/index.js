@@ -688,11 +688,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            why do we <br/> measure error?
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             how do we know <br/> network output <br/> is any good?
           </Text>
         </Slide>
@@ -761,11 +756,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            work backwards through the network
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             determine how <br/> change in given <br/> weight affects error
           </Text>
         </Slide>
@@ -776,7 +766,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            simplest case of single hidden layer node to output
+            case of single hidden layer node to output
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -812,7 +802,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            goal weight is <br/> just minimum
+            minimum is <br /> goal weight
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -841,11 +831,6 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            derivative gives relationship <br/> between variables
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
           <Image src={images.errorFunctionWithDerivative} />
         </Slide>
         <Slide bgColor="primary">
@@ -856,6 +841,11 @@ export default class Presentation extends React.Component {
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             derivative ~ H * (O - target)
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            derivative is weight update
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -888,17 +878,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            can update weights connecting hidden layer and output layer
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
             update to other weights connecting input and hidden layer is the same
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            complicated by activation function
           </Text>
         </Slide>
         <Slide bgColor="primary">
@@ -986,11 +966,6 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide bgColor="primary">
-          <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            weight update scales with activation value
-          </Text>
-        </Slide>
-        <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
             derivative ~ activation * (output - target)
           </Text>
@@ -1015,12 +990,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            just choose alpha <br/> that works for us
+            alpha has impact on rate of convergence
           </Text>
         </Slide>
         <Slide bgColor="primary">
           <Text margin="10px 0 0" textColor="secondary" textSize="2.3em" bold>
-            alpha has impact on rate of convergence
+            just choose alpha <br/> that works for us
           </Text>
         </Slide>
         <Slide bgColor="quartenary" notes="">
